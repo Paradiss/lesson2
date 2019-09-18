@@ -5,9 +5,8 @@ def ask_user():
     dela = ''
     while dela != 'хорошо':
         question = input("Спроси что-нибудь.\n")
-        if aq_dict.get(question) != None:
-            dela = aq_dict[question]
-            print(dela)
+        if question in aq_dict:
+            print(aq_dict[question])
         dela = (input('Как дела?\n')).lower()
 
 ask_user()
